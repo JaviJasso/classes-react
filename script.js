@@ -30,16 +30,26 @@ class Factory {
     this.abs = true
     this.warranty = "60,000 miles / 3 years"
   }
+
+  massBuild(quantity, options) {
+    console.log(`Building ${quantity} ${options.color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}`)
+  }
+
+  customerBuild(color, options){
+    console.log(`Building one ${color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}, ${options.option4}, ${options.option5}`)
+  }
 }
 
-  Factory.prototype.massBuild = function(quantity, options) {
-      console.log(`Building ${quantity} ${options.color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}`)
-  }
-
-  Factory.prototype.customerBuild = function(color, options){
-      console.log(`Building one ${color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}, ${options.option4}, ${options.option5}`)
-  }
-
+const factory = new Factory()
+factory.massBuild(300,{
+  color: 'pink',
+  trim: 'Touring',
+  model: 'cabrio',
+  option1: 'vegan leather seats',
+  option2: 'unbreakable tires',
+  option3: 'water fuel',
+} )
+console.log(factory);
 // CREATE A SUB-CLASS CALLED CAR
 // It should extend from Factory.
 // The constructor should have the following properties: model, doors, color, enginetype,
@@ -123,7 +133,7 @@ let truck = new Truck({model: "Trail Blazer", color: "blue", enginesize: 8, hitc
 // Create an instance  Car.
 // The following properties must be specified: model (mazda3), color (red), enginetype (hybrid), transmission (automatic), trim (touring), wheels (base), audio (premium), seats (leather), and moonroof (true)
 // Write your 'mazda3' instance below:
-let mazda3 = new Car({model:'mazda3', color:'red', enginetype:'hybrid', transmission:'automatic', trim:'touring', wheelstrim:'base', audio:'premium', seatstrim:'leather', moonroof:true })
+let mazda3 = new Car({model:'mazda3', color:'red', enginetype:'hybrid', transmission:'automatic', trim:'touring', wheelstrim:'base', audio:'premium', seats:'leather', moonroof:true })
 // Print mazda3. I should have all the above properties.
 // Write your code below:
 console.log(mazda3);

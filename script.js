@@ -32,13 +32,13 @@ class Factory {
   }
 }
 
-  // Factory.prototype.massBuild = function(quantity, options) {
-  //     console.log(`Building ${quantity} ${options.color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}`)
-  // }
-  //
-  // Factory.prototype.customerBuild = function(color, options){
-  //     console.log(`Building one ${color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}, ${options.option4}, ${options.option5}`)
-  // }
+  Factory.prototype.massBuild = function(quantity, options) {
+      console.log(`Building ${quantity} ${options.color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}`)
+  }
+
+  Factory.prototype.customerBuild = function(color, options){
+      console.log(`Building one ${color} ${options.trim} ${options.model} with the following options: ${options.option1}, ${options.option2}, ${options.option3}, ${options.option4}, ${options.option5}`)
+  }
 
 // CREATE A SUB-CLASS CALLED CAR
 // It should extend from Factory.
